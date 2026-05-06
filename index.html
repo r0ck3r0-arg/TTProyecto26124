@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mi Tienda de Accesorios</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Tienda de Accesorios 📚</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="inicio">
+        <h2>Bienvenido a TiendaAccesorios</h2>
+        <p>Accesorios únicos para amantes de la lectura 📖</p>
+      </section>
+      <section id="banner">
+        <video autoplay muted loop>
+          <source src="img/banner.mp4" type="video/mp4" />
+        </video>
+      </section>
+      <section id="productos">
+        <h2>Productos Destacados</h2>
+        <div class="productosD-container">
+          <div class="card">
+            <img src="img/Marcapaginas.jpg" alt="Marcapáginas cuero" />
+            <h3>Marcapáginas de cuero artesanal</h3>
+          </div>
+          <div class="card">
+            <img src="img/luz-led.jpg" alt="Luz LED" />
+            <h3>Luz LED para lectura</h3>
+          </div>
+          <div class="card">
+            <img src="img/funda.jpg" alt="Funda libro" />
+            <h3>Funda protectora de libros</h3>
+          </div>
+          <div class="card">
+            <img src="img/soporte.jpg" alt="Soporte libros" />
+            <h3>Soporte de libros ajustable</h3>
+          </div>
+          <div class="card">
+            <img src="img/clip.jpg" alt="Clip sujetador" />
+            <h3>Clip sujetapáginas</h3>
+          </div>
+        </div>
+      </section>
+      <section id="resenas">
+        <h2>Reseñas</h2>
+        <div class="grid-resenas">
+          <div class="resena">⭐️⭐️⭐️⭐️⭐️ Excelente calidad</div>
+          <div class="resena">⭐️⭐️⭐️⭐️ Muy buenos productos</div>
+          <div class="resena">⭐️⭐️⭐️⭐️⭐️ Me encantó</div>
+          <div class="resena">⭐️⭐️⭐️ Buen servicio</div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+
+        <div class="contacto-container">
+          <div class="contacto-info">
+            <p><strong>Dirección:</strong> Arenales 3002</p>
+            <p><strong>Tel:</strong> +54 11 2345-6789</p>
+            <p><strong>Tel2:</strong> 0810-123-4567</p>
+            <p>
+              <strong>Horarios:</strong><br />
+              Lu a Vi de 9 a 20<br />
+              Sa de 10 a 17
+            </p>
+          </div>
+
+          <div class="contacto-mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5528.135980830032!2d-58.40628944319921!3d-34.58970292908684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sar!4v1777424083752!5m2!1ses-419!2sar"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <form action="https://formspree.io/f/xgodkrdr" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input type="email" name="email" placeholder="Correo" required />
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>TiendaAccesorios © 2026 Leo Page</p>
+    </footer>
+  </body>
+</html>
