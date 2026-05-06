@@ -17,7 +17,7 @@ TiendaAccesorios es una tienda online de accesorios para lectores, donde se pued
 ## Funcionalidades
 
 - Navegación interna
-- Diseño responsivo
+- ~Diseño responsivo~
 - Sección de productos en cards
 - Reseñas organizadas con Grid
 - Formulario funcional de contacto
