@@ -42,7 +42,7 @@ section {
   text-align: center;
 }
 
-.productos-container {
+.productos-deco, .productos-furniture{
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -53,7 +53,7 @@ section {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .grid-resenas {
