@@ -65,7 +65,8 @@ function finalizarCompra() {
     return;
   }
 
-  alert('¡Gracias por tu compra!');
+  //alert('¡Gracias por tu compra!');
+  Swal.fire("¡Gracias por tu compra!");
   vaciarCarrito();
   cerrarCarrito();
 }
@@ -131,7 +132,7 @@ function animarBtnCarrito() {
   setTimeout(() => btn.classList.remove('carrito-pulse'), 400);
 }
 
-// aAbre el panel del carrito
+// Abre el panel del carrito
 function abrirCarrito() {
   document.getElementById('panel-carrito').classList.add('abierto');
   document.getElementById('overlay-carrito').classList.add('abierto');
