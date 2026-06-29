@@ -2,7 +2,9 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Tienda de Accesorios</title>
+    <meta name="description" content="Tienda online de accesorios para lectores: marcapáginas, luces de lectura y fundas para libros." />
     <link rel="stylesheet" href="css/styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
   </head>
@@ -38,23 +40,43 @@
         <div class="productosD-container">
           <div class="card">
             <img src="img/Marcapaginas.jpg" alt="Marcapáginas cuero" />
-            <h3>Marcapáginas de cuero artesanal</h3>
+            <div class="card-body">
+              <h3>Marcapáginas de cuero artesanal</h3>
+              <div class="precio-box">$12.99</div>
+              <button class="btn-agregar" onclick="agregarAlCarrito({id: 101, title: 'Marcapáginas de cuero artesanal', price: 12.99, thumbnail: 'img/Marcapaginas.jpg'})">Agregar al carrito</button>
+            </div>
           </div>
           <div class="card">
             <img src="img/luz-led.jpg" alt="Luz LED" />
-            <h3>Luz LED para lectura</h3>
+            <div class="card-body">
+              <h3>Luz LED para lectura</h3>
+              <div class="precio-box">$24.99</div>
+              <button class="btn-agregar" onclick="agregarAlCarrito({id: 102, title: 'Luz LED para lectura', price: 24.99, thumbnail: 'img/luz-led.jpg'})">Agregar al carrito</button>
+            </div>
           </div>
           <div class="card">
             <img src="img/funda.jpg" alt="Funda libro" />
-            <h3>Funda protectora de libros</h3>
+            <div class="card-body">
+              <h3>Funda protectora de libros</h3>
+              <div class="precio-box">$18.99</div>
+              <button class="btn-agregar" onclick="agregarAlCarrito({id: 103, title: 'Funda protectora de libros', price: 18.99, thumbnail: 'img/funda.jpg'})">Agregar al carrito</button>
+            </div>
           </div>
           <div class="card">
             <img src="img/soporte.jpg" alt="Soporte libros" />
-            <h3>Soporte de libros ajustable</h3>
+            <div class="card-body">
+              <h3>Soporte de libros ajustable</h3>
+              <div class="precio-box">$34.99</div>
+              <button class="btn-agregar" onclick="agregarAlCarrito({id: 104, title: 'Soporte de libros ajustable', price: 34.99, thumbnail: 'img/soporte.jpg'})">Agregar al carrito</button>
+            </div>
           </div>
           <div class="card">
             <img src="img/clip.jpg" alt="Clip sujetador" />
-            <h3>Clip sujetapáginas</h3>
+            <div class="card-body">
+              <h3>Clip sujetapáginas</h3>
+              <div class="precio-box">$8.99</div>
+              <button class="btn-agregar" onclick="agregarAlCarrito({id: 105, title: 'Clip sujetapáginas', price: 8.99, thumbnail: 'img/clip.jpg'})">Agregar al carrito</button>
+            </div>
           </div>
         </div>
       </section>
@@ -105,5 +127,27 @@
     <footer>
       <p>TiendaAccesorios © 2026 Leo Page</p>
     </footer>
+    <script src="js/carrito.js"></script>
+    <script>
+      function validarFormulario(e) {
+        const nombre = document.querySelector('input[name="nombre"]').value;
+        const email = document.querySelector('input[name="email"]').value;
+        const mensaje = document.querySelector('textarea[name="mensaje"]').value;
+
+        if (!nombre || !email || !mensaje) {
+          alert('Completá todos los campos');
+          e.preventDefault();
+          return;
+        }
+
+        if (!email.includes('@') || !email.includes('.')) {
+          alert('El correo no es válido');
+          e.preventDefault();
+          return;
+        }
+      }
+
+      document.querySelector('#contacto form').addEventListener('submit', validarFormulario);
+    </script>
   </body>
 </html>

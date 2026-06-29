@@ -2,7 +2,9 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos - TiendaAccesorios</title>
+    <meta name="description" content="Catálogo de productos de TiendaAccesorios." />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
@@ -32,6 +34,7 @@
       </section>
     </main>
 
+<script src="js/carrito.js"></script>
 <script>
   fetch('https://dummyjson.com/products/category/home-decoration')
     .then(response => response.json())
@@ -48,6 +51,20 @@
             <div class="precio-box">$${producto.price}</div>
           </div>
         `;
+
+        const btnAgregar = document.createElement('button');
+        btnAgregar.classList.add('btn-agregar');
+        btnAgregar.textContent = 'Agregar al carrito';
+        btnAgregar.addEventListener('click', () => {
+          agregarAlCarrito({
+            id: producto.id,
+            title: producto.title,
+            price: producto.price,
+            thumbnail: producto.thumbnail,
+          });
+        });
+        card.querySelector('.card-body').appendChild(btnAgregar);
+
         productosContainer.appendChild(card);
       });
     })
